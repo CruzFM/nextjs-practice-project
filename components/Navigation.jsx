@@ -7,6 +7,10 @@ const links = [{
 {
   label: 'About',
   route: '/about'
+},
+{
+  label: 'Posts',
+  route: '/posts'
 }]
 
 export default function Navigation () {
@@ -16,7 +20,7 @@ export default function Navigation () {
         <ul className=' flex justify-around'>
           {links.map(({ label, route }) => (
             <li key={label} className='p-3'>
-              <Link href={route}>
+              <Link href={route} className='text-black'>
                 {label}
               </Link>
             </li>
