@@ -1,3 +1,5 @@
+import LikeButton from './[id]/LikeButton'
+
 const fetchPosts = () => {
   return fetch('https://jsonplaceholder.typicode.com/posts')
     .then(res => res.json())
@@ -12,6 +14,7 @@ export default async function PostPage () {
         <article key={post.id}>
           <h2>{post.title}</h2>
           <p>{post.body}</p>
+          <LikeButton />
         </article>
       ))}
     </div>
